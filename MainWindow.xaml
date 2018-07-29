@@ -1,0 +1,43 @@
+﻿<Window x:Name="TTSV" x:Class="TTSV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TTSV"
+        mc:Ignorable="d"
+        Title="TTSV" Height="515" Width="960" Background="#FFFFFFFF">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="EntryText" HorizontalAlignment="Left" Height="148" Margin="20,20,0,0" TextWrapping="Wrap" Text="１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０" VerticalAlignment="Top" Width="907" TextChanged="textBox_TextChanged" FontSize="18" Grid.ColumnSpan="2"/>
+        <Button x:Name="MakeVSQX"              Content="VSQX生成"           HorizontalAlignment="Left" Height="35" Margin="20,177,0,0"  VerticalAlignment="Top" Width="110" FontSize="20" Click="MakeVSQX_Click"/>
+        <Button x:Name="SelectConfig"          Content="設定ファイル選択"   HorizontalAlignment="Left" Height="30" Margin="162,177,0,0" VerticalAlignment="Top" Width="110" Click="SelectConfig_Click"/>
+        <Button x:Name="SetEntryPass"          Content="入力テキスト保存先" HorizontalAlignment="Left" Height="30" Margin="162,354,0,0" VerticalAlignment="Top" Width="110" Click="SetEntryPass_Click"/>
+        <Button x:Name="SetVSQXPass"           Content="VSQX保存先"         HorizontalAlignment="Left" Height="30" Margin="162,393,0,0" VerticalAlignment="Top" Width="110" Click="SetVSQXPass_Click"/>
+        <Button x:Name="SetWorkFilePass"       Content="作業ファイル保存先" HorizontalAlignment="Left" Height="30" Margin="162,434,0,0" VerticalAlignment="Top" Width="110" Click="SetWorkFilePass_Click"/>
+        <Label x:Name="ConfigFilePass"         Content="" HorizontalAlignment="Left" Height="30" Margin="290,177,0,0" VerticalAlignment="Top" Width="637" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="OpenJTalkOption"        Content="" HorizontalAlignment="Left" Height="30" Margin="290,215,0,0" VerticalAlignment="Top" Width="637" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="compID"                 Content="" HorizontalAlignment="Left" Height="30" Margin="290,250,0,0" VerticalAlignment="Top" Width="140" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="vVoiceName"             Content="" HorizontalAlignment="Left" Height="30" Margin="435,250,0,0" VerticalAlignment="Top" Width="170" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="Comment"                Content="" HorizontalAlignment="Left" Height="30" Margin="610,250,0,0" VerticalAlignment="Top" Width="317" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="BaseNoteNumTitle"       Content="Base"       HorizontalAlignment="Left" Height="30" Margin="290,284,0,0" VerticalAlignment="Top" Width="40" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="MiddleNoteNumTitle"     Content="Middle"     HorizontalAlignment="Left" Height="30" Margin="335,284,0,0" VerticalAlignment="Top" Width="55" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="TopNoteNumTitle"        Content="Top"        HorizontalAlignment="Left" Height="30" Margin="395,284,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="NaturalEndNoteNumTitle" Content="NaturalEnd" HorizontalAlignment="Left" Height="30" Margin="435,284,0,0" VerticalAlignment="Top" Width="80" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="BottomNoteNumTitle"     Content="Bottom"     HorizontalAlignment="Left" Height="30" Margin="520,284,0,0" VerticalAlignment="Top" Width="60" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="QuestionNoteNumTitle"   Content="Question"   HorizontalAlignment="Left" Height="30" Margin="585,284,0,0" VerticalAlignment="Top" Width="68" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="PrefixTitle"            Content="Prefix"     HorizontalAlignment="Left" Height="30" Margin="658,284,0,0" VerticalAlignment="Top" Width="50" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="BaseNoteNumValue"       Content="" HorizontalAlignment="Left" Height="30" Margin="290,319,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="MiddleNoteNumValue"     Content="" HorizontalAlignment="Left" Height="30" Margin="346,319,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="TopNoteNumValue"        Content="" HorizontalAlignment="Left" Height="30" Margin="395,319,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="NaturalEndNoteNumValue" Content="" HorizontalAlignment="Left" Height="30" Margin="455,319,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="BottomNoteNumValue"     Content="" HorizontalAlignment="Left" Height="30" Margin="534,319,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="QuestionNoteNumValue"   Content="" HorizontalAlignment="Left" Height="30" Margin="601,319,0,0" VerticalAlignment="Top" Width="35" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="PrefixValue"            Content="" HorizontalAlignment="Left" Height="30" Margin="658,319,0,0" VerticalAlignment="Top" Width="269" FontSize="14" Background="#FFEFEDDD" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="EntryTextPass"          Content="" HorizontalAlignment="Left" Height="30" Margin="290,354,0,0" VerticalAlignment="Top" Width="637" FontSize="14" Background="#FFE6E6E6" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="VSQXPass"               Content="" HorizontalAlignment="Left" Height="30" Margin="290,393,0,0" VerticalAlignment="Top" Width="637" FontSize="14" Background="#FFE6E6E6" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Label x:Name="WorkFilePass"           Content="" HorizontalAlignment="Left" Height="30" Margin="290,434,0,0" VerticalAlignment="Top" Width="637" FontSize="14" Background="#FFE6E6E6" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Button x:Name="exit"                  Content="終了"                    HorizontalAlignment="Left" Height="20" Margin="25,440,0,0" VerticalAlignment="Top" Width="60"  Click="exit_Click"/>
+    </Grid>
+</Window>
