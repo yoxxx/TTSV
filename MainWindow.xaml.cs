@@ -214,7 +214,6 @@ namespace TTSV
     /// </summary>
     public partial class MainWindow : Window
     {
-
         /// <summary>
         /// メインウィンドウ初期設定
         /// </summary>
@@ -249,7 +248,7 @@ namespace TTSV
             NaturalEndNoteNumValue.Content = TTSVCFG.NaturalEndNoteNum;
             BottomNoteNumValue.Content     = TTSVCFG.BottomNoteNum;
             QuestionNoteNumValue.Content   = TTSVCFG.QuestionNoteNum;
-            NoteSplitMode.Content          = TTSVCFG.NoteSplitMode;
+            NoteSplitModeValue.Content     = TTSVCFG.NoteSplitMode;
             PrefixValue.Content            = TTSVCFG.Prefix;
             OpenJTalkOption.Content        = TTSVCFG.OpenJTalkOption;
 
@@ -359,7 +358,7 @@ namespace TTSV
             NaturalEndNoteNumValue.Content = TTSVCFG.NaturalEndNoteNum;
             BottomNoteNumValue.Content     = TTSVCFG.BottomNoteNum;
             QuestionNoteNumValue.Content   = TTSVCFG.QuestionNoteNum;
-            NoteSplitMode.Content          = TTSVCFG.NoteSplitMode;
+            NoteSplitModeValue.Content     = TTSVCFG.NoteSplitMode;
             PrefixValue.Content            = TTSVCFG.Prefix;
             OpenJTalkOption.Content        = TTSVCFG.OpenJTalkOption;
 
@@ -372,6 +371,9 @@ namespace TTSV
         /// </summary>
         private void SetEntryPass_Click(object sender, RoutedEventArgs e)
         {
+
+            string current = System.IO.Directory.GetCurrentDirectory();
+
             var dlg = new Microsoft.WindowsAPICodePack.Dialogs.CommonOpenFileDialog();
 
             dlg.Title                     = "入力テキスト保存先フォルダの選択";
@@ -391,6 +393,9 @@ namespace TTSV
             {
                 EntryTextPass.Content = dlg.FileName;
             }
+
+            System.IO.Directory.SetCurrentDirectory(current);
+
         }
 
         /// <summary>
@@ -398,6 +403,9 @@ namespace TTSV
         /// </summary>
         private void SetVSQXPass_Click(object sender, RoutedEventArgs e)
         {
+
+            string current = System.IO.Directory.GetCurrentDirectory();
+
             var dlg = new Microsoft.WindowsAPICodePack.Dialogs.CommonOpenFileDialog();
 
             dlg.Title                     = "ＶＳＱＸファイル保存先フォルダの選択";
@@ -417,6 +425,9 @@ namespace TTSV
             {
                 VSQXPass.Content = dlg.FileName;
             }
+
+            System.IO.Directory.SetCurrentDirectory(current);
+
         }
 
         /// <summary>
@@ -424,6 +435,8 @@ namespace TTSV
         /// </summary>
         private void SetWorkFilePass_Click(object sender, RoutedEventArgs e)
         {
+            string current = System.IO.Directory.GetCurrentDirectory();
+
             var dlg = new Microsoft.WindowsAPICodePack.Dialogs.CommonOpenFileDialog();
 
             dlg.Title                     = "作業ファイル保存先フォルダの選択";
@@ -443,6 +456,9 @@ namespace TTSV
             {
                 WorkFilePass.Content = dlg.FileName;
             }
+
+            System.IO.Directory.SetCurrentDirectory(current);
+
         }
 
         /// <summary>
