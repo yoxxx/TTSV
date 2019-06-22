@@ -202,6 +202,7 @@ namespace TTSV
     /// </summary>
     public partial class MainWindow : Window
     {
+
         /// <summary>
         /// メインウィンドウ初期設定
         /// </summary>
