@@ -47,6 +47,7 @@ namespace TTSV
         public Double NaturalEndNoteNum;
         public Double BottomNoteNum;
         public Double QuestionNoteNum;
+        public Double NoteSplitMode;
         public byte ColorR;
         public byte ColorG;
         public byte ColorB;
@@ -156,6 +157,17 @@ namespace TTSV
                             QuestionNoteNum = 64.00;
                         }
                         break;
+                    case "NoteSplitMode":
+                        NoteSplitMode = Convert.ToInt32(item[1]);
+                        if ((1 <= NoteSplitMode) & (NoteSplitMode <= 2))
+                        {
+                            NoteSplitMode = NoteSplitMode * 1.00;
+                        }
+                        else
+                        {
+                            NoteSplitMode = 1.00;
+                        }
+                        break;
                     case "ColorR":
                         ColorR = Convert.ToByte(item[1]);
                         if (((byte)0 <= ColorR) & (ColorR <= (byte)255))
@@ -237,6 +249,7 @@ namespace TTSV
             NaturalEndNoteNumValue.Content = TTSVCFG.NaturalEndNoteNum;
             BottomNoteNumValue.Content     = TTSVCFG.BottomNoteNum;
             QuestionNoteNumValue.Content   = TTSVCFG.QuestionNoteNum;
+            NoteSplitMode.Content          = TTSVCFG.NoteSplitMode;
             PrefixValue.Content            = TTSVCFG.Prefix;
             OpenJTalkOption.Content        = TTSVCFG.OpenJTalkOption;
 
@@ -346,6 +359,7 @@ namespace TTSV
             NaturalEndNoteNumValue.Content = TTSVCFG.NaturalEndNoteNum;
             BottomNoteNumValue.Content     = TTSVCFG.BottomNoteNum;
             QuestionNoteNumValue.Content   = TTSVCFG.QuestionNoteNum;
+            NoteSplitMode.Content          = TTSVCFG.NoteSplitMode;
             PrefixValue.Content            = TTSVCFG.Prefix;
             OpenJTalkOption.Content        = TTSVCFG.OpenJTalkOption;
 
